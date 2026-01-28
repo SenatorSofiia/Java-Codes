@@ -1,0 +1,9 @@
+package pr_4;
+public class pr_4_1 {
+	public static void main (String args[]) {
+		int sum=0;
+		for (int n=3; n<8; n++)
+			sum=sum+n;
+		System.out.println("Сума чисел="+sum);
+	}
+}
