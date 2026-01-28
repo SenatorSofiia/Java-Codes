@@ -1,0 +1,22 @@
+package pr_10;
+public class pr_10 {
+	public static void main(String args[]) {
+		String str1 = "*6@)&>!/+3=%,*5|(^* ";
+		char [] chArray = str1.toCharArray(); {
+			for (int i=0; i<chArray.length; i++) {
+				if (chArray[i] == '*')
+					chArray[i] = ' ';
+			}
+			String str5 = new String(chArray).replace(" ", "");
+			System.out.println(str5);
+		}
+		String str2="asddfghjk";
+		char [] chArray1 = str2.toCharArray(); {
+			System.out.println("Довжина рядку asddfghjk = "+chArray1.length);
+			
+		}
+		char [] chArray2 = new char[4];
+		System.arraycopy(chArray1, 5, chArray2, 0, 4);
+		System.out.println(chArray2);
+		}
+	}
