@@ -1,0 +1,15 @@
+package pr_5;
+import static java.lang.Math.*;
+public class pr_5_1 {
+   public static void main(String[] args) {
+       double y;
+       for (double x = 0.1; x <= 1.0; x += 0.1) {
+           y = count(x);
+           System.out.println("x = " + x + ", y = " + y);
+       }
+   }
+   private static double count(double x) {
+       double y = pow(E, x * cos(PI / 4)) * cos(x * sin(PI / 4));
+       return y;
+   }
+}
