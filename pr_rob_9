@@ -1,0 +1,11 @@
+package pr_9;
+import java.util.Arrays;
+public class pr_9 {
+	public static void main(String[] args) {
+		int mas3[]= {43, 7, 89, 56, 12, 68, 31, 94, 25, 63, 48, 77, 5, 39, 84, 16, 58};
+		int mas7[]= new int[3];
+		System.arraycopy(mas3, 10, mas7, 0, 3);
+		System.out.println(Arrays.toString(mas3));
+		System.out.println(Arrays.toString(mas7));
+	}
+}
