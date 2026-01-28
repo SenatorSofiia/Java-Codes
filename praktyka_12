@@ -1,0 +1,17 @@
+package prakt_12;
+public class prakt_12 {
+public static void main(String[] args) {
+	int y=0;
+	String str = "Сонце повільно заходило за обрій, фарбуючи небо у рожево-золотисті відтінки вечора. \r\n"
+			+ "Тихий вітер колихав траву, приносячи аромат свіжості й спокою після спекотного дня. \r\n"
+			+ "Пташки замовкли у своїх гніздах, поступаючись місцем мелодійному співу вечірніх цвіркунів. ";
+			char [] chArray = str.toCharArray();{
+				for(int i=0; i<chArray.length; i++) {
+					if (chArray[i] ==' ') {
+						y++;
+				}
+			}
+		System.out.println("Кількість слів: "+y);
+		}
+	}
+}
