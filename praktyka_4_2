@@ -1,0 +1,10 @@
+package prakt_4;
+public class prakt_4_2 {
+	public static void main(String[] args) {
+		double y;
+		for (double x=0.1; x<=1.0; x+=0.1) {
+			y=Math.pow(Math.E,x*Math.cos(Math.PI/4))*Math.cos(x*Math.sin(Math.PI/4));
+			System.out.println("y="+y);
+		}
+	}
+}
