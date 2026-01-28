@@ -1,0 +1,103 @@
+package pr_16;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import java.awt.GridLayout;
+public class pr_16 {
+	public static void main(String[] args) {
+		JFrame myFrame = new JFrame("Калькулятор");
+		myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		JPanel myPanel = new JPanel();
+		myPanel.setLayout(new GridLayout(5, 4, 10, 10));
+		JLabel label1 = new JLabel("Цифра 1:");
+		JTextField field1 = new JTextField("0",10);
+		JLabel label2 = new JLabel("Цифра 2:");
+		JTextField field2 = new JTextField("0",10);
+		JLabel label3 = new JLabel("Сума");
+		JTextField field3 = new JTextField(10);
+		JButton myButton = new JButton("+");
+		JTextField field4 = new JTextField("0",10);
+		JLabel label4 = new JLabel("Синус");
+		JButton myButton1 = new JButton("sin(a)");
+		JTextField field5 = new JTextField("0",10);
+		JLabel label5 = new JLabel("Відсоток");
+		JButton myButton2 = new JButton("%");
+		JTextField field6 = new JTextField("0",10);
+		JLabel label6 = new JLabel("Частка");
+		JButton myButton3 = new JButton("/");
+		myPanel.add(label1);
+		myPanel.add(field1);
+		
+		myPanel.add(label2);
+		myPanel.add(field2);
+		
+		myPanel.add(label3);
+		myPanel.add(field3);
+		myPanel.add(myButton);
+		myPanel.add(new JLabel(""));
+		
+		myPanel.add(label4);
+		myPanel.add(field4);
+		myPanel.add(myButton1);
+		myPanel.add(new JLabel(""));
+		
+		myPanel.add(label5);
+		myPanel.add(field5);
+		myPanel.add(myButton2);
+		myPanel.add(new JLabel(""));
+		
+		myPanel.add(label6);
+		myPanel.add(field6);
+		myPanel.add(myButton3);
+		myPanel.add(new JLabel(""));
+		
+		myFrame.setContentPane(myPanel);
+		myFrame.setSize(500, 500);
+		myFrame.setVisible(true);
+		myButton.addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+		float a, b, sum;
+		a = Float.parseFloat(field1.getText().toString());
+		b = Float.parseFloat(field2.getText().toString());
+		sum = a+b;
+		field3.setText(""+ sum);
+		}
+		});
+		
+		myButton1.addActionListener(new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+		double a, sin;
+		a = Float.parseFloat(field1.getText().toString());
+		sin=Math.sin(a);
+		field4.setText(""+ sin);
+			}
+			});
+		
+		myButton2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			float a, b, vids;
+			a = Float.parseFloat(field1.getText().toString());
+			b = Float.parseFloat(field2.getText().toString());
+			vids = a*b/100;
+			field5.setText(""+ vids);
+			}
+			});
+		myButton3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+			float a, b, dil;
+			a = Float.parseFloat(field1.getText().toString());
+			b = Float.parseFloat(field2.getText().toString());
+			dil = a/b;
+			field6.setText(""+ dil);
+			}
+			});
+		}
+}
