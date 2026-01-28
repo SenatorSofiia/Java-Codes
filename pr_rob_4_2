@@ -1,0 +1,9 @@
+package pr_4;
+public class pr_4_2 {
+	public static void main (String args[]) {
+		int dob=1;
+		for (int n=3; n<8; n++)
+			dob=dob*n;
+		System.out.println("Добуток чисел="+dob);
+	}
+}
