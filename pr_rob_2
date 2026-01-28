@@ -1,0 +1,12 @@
+import static java.lang.Math. *;
+public class pr_2 {
+	public static void main(String[] args) {
+		double v, x=2.0;
+		v = count(x);
+		System.out.println(v);
+	}
+	private static double count(double x) {
+		x=((pow(cos(pow(x, 1.5)),3)+pow(sin(pow(x,3)),2))/(pow(log(abs(x)+pow(2.71,cbrt(x+1.8))),2)+sqrt(x)));
+		return x;
+	}	
+}
