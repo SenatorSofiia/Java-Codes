@@ -1,0 +1,14 @@
+package prakt_2_2;
+import java.util.Scanner;
+class prakr_2_2_1 {
+	double x,y,z;
+	public void Scan() {
+		Scanner scn=new Scanner(System.in);
+		System.out.println("Type x:");
+		x=scn.nextDouble();
+		System.out.println("Type y:");
+		y=scn.nextDouble();
+		System.out.println("Type z:");
+		z=scn.nextDouble();
+	}
+}
