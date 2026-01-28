@@ -1,0 +1,10 @@
+package prakt_3;
+public class prakt_3_2 {
+	public static void main(String[] args) {
+		double y=0;
+		for (int i=1; i<=10; i++) {
+			y=y+Math.sqrt((i*i+i)/10);
+		}
+		System.out.println("Znashennia vyrazu = "+y);
+	}
+}
