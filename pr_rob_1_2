@@ -1,0 +1,11 @@
+package lab_1_1;
+class pr_1_2{
+	public static void main(String args[]){
+		int a,b,c,rez;
+		a=34;
+		b=90;
+		c=78;
+		rez=a*(b-c);
+		System.out.println("Rezult="+rez);
+	}
+}
