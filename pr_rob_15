@@ -1,0 +1,104 @@
+package pr_15;
+import java.awt.Color;
+import java.awt.GridLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+public class pr_15 {
+	public static void main(String[] args) throws
+	InterruptedException {
+	JFrame frame1 = new JFrame("Zavdannia 1");
+	JFrame frame = new JFrame("Zavdannia 2");
+	
+	frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame1.setSize(800, 400);
+	frame1.setLocationRelativeTo(null);
+	frame1.setVisible(true);
+	frame1.setLayout(new GridLayout(2,2,4,4));
+	JLabel label3 = new JLabel("DO 50%");
+	JLabel label4 = new JLabel ("PISLYA 50%");
+	
+	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	frame.setSize(800, 400);
+	frame.setLocationRelativeTo(null);
+	frame.setVisible(true);
+	frame.setLayout(new GridLayout(2,2,4,4));
+	JLabel label = new JLabel("Встановлення");
+	JLabel label2 = new JLabel ("Загальне встановлення");
+	
+	JPanel mypanel=new JPanel();
+	mypanel.setBackground(Color.blue);
+	frame.add(mypanel);
+	
+	JPanel mypanel2=new JPanel();
+	mypanel2.setBackground(Color.yellow);
+	frame.add(mypanel2);
+	
+	JPanel mypanel3=new JPanel();
+	mypanel3.setBackground(Color.red);
+	frame1.add(mypanel3);
+	
+	JPanel mypanel4=new JPanel();
+	mypanel4.setBackground(Color.green);
+	frame1.add(mypanel4);
+	
+	JProgressBar mybar =new JProgressBar();
+	mybar.setMinimum(0);
+	mybar.setMaximum(100);
+	mybar.setStringPainted(true);
+	mybar.setValue(0);
+	
+	JProgressBar mybar2 =new JProgressBar();
+	mybar2.setMinimum(0);
+	mybar2.setMaximum(100);
+	mybar2.setStringPainted(true);
+	mybar2.setValue(0);
+	
+	JProgressBar mybar3 =new JProgressBar();
+	mybar3.setMinimum(0);
+	mybar3.setMaximum(50);
+	mybar3.setStringPainted(true);
+	mybar3.setValue(0);
+	
+	JProgressBar mybar4 =new JProgressBar();
+	mybar4.setMinimum(50);
+	mybar4.setMaximum(100);
+	mybar4.setStringPainted(true);
+	mybar4.setValue(0);
+	
+	mypanel2.add(mybar2);
+	mypanel.add(mybar);
+	mypanel.add(label);
+	mypanel2.add(label2);
+	frame.setSize(601, 201);
+	
+	mypanel3.add(mybar3);
+	mypanel4.add(mybar4);
+	mypanel3.add(label3);
+	mypanel4.add(label4);
+	frame1.setSize(601, 201);
+	
+		for(int k=mybar3.getMinimum(); k<=mybar3.getMaximum(); k++) {
+			Thread.sleep(50);
+			mybar3.setValue(k);
+				}
+		for(int d=mybar4.getMinimum(); d<=mybar4.getMaximum(); d++) {
+			Thread.sleep(50);
+			mybar4.setValue(d);
+				}
+		
+	int cycles = 10;
+	for(int c=1; c<=cycles; c++) {
+	for (int i=mybar.getMinimum();i<=mybar.getMaximum();i++){
+	Thread.sleep(100);
+	mybar.setValue(i);
+	}
+	mybar2.setValue(mybar2.getValue()+10);
+	mybar.setValue(0);
+		if(mybar2.getValue() == 100) {
+			break;
+				}
+			}
+		}
+	}
