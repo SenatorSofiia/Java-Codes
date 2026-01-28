@@ -1,0 +1,53 @@
+package pr_3;
+import  java.util.Scanner;
+class Reader {
+   int a, b, c, d;
+   public void Scan() {
+       Scanner scn = new Scanner(System.in);
+       System.out.println("Введіть число a");
+       a = scn.nextInt();
+       System.out.println("Введіть число b");
+       b = scn.nextInt();
+       System.out.println("Введіть число c");
+       c = scn.nextInt();
+       System.out.println("Введіть число d");
+       d = scn.nextInt();
+   }
+}
+
+
+package pr_3;
+public class lab_3 {
+}
+class Lab3 {
+   public static void main(String args[]) {
+       int y, z;
+       Reader myR = new Reader();
+       myR.Scan();
+       y = myR.a + myR.c + myR.d * myR.c;
+       switch (y) {
+           case 5:
+               z = (2 + myR.a);
+               System.out.println("z=" + z);
+               break;
+           case 6:
+               z = (7 + myR.b);
+               System.out.println("z=" + z);
+               break;
+           case 7:
+               z = (8 - myR.c);
+               System.out.println("z=" + z);
+               break;
+           case 8:
+               z = (8 - myR.c);
+               System.out.println("z=" + z);
+               break;
+           case 9:
+               z = (10 * myR.d);
+               System.out.println("z=" + z);
+               break;
+           default:
+               System.out.println("default");
+       }
+   }
+}
