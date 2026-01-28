@@ -1,0 +1,10 @@
+package pr_13;
+
+import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+public class pr_13_1 {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("BorderLayout Example");
+        frame.setLayout(new BorderLayout());
