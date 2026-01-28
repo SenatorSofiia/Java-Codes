@@ -1,0 +1,24 @@
+package pr_11;
+import java.util.Scanner;
+class Reader {
+   int r, h;
+   public void Scan() {
+       Scanner scn = new Scanner(System.in);
+       System.out.print("Введіть число r: ");
+       r = scn.nextInt();
+       System.out.print("Введіть число h: ");
+       h = scn.nextInt();
+   }
+}
+public class pr_11 {
+   public static void main(String[] args) {
+       Reader myR = new Reader();
+       myR.Scan();
+       double s1 = count(myR.r, myR.h);
+       System.out.println("S = " + s1);
+   }
+   private static double count(double r, double h) {
+       double x = 2 * Math.PI * r * (h + r);
+       return x;
+   }
+}
