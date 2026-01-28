@@ -1,0 +1,37 @@
+package prakt_1;
+import static java.lang.Math.*;
+public class prakt_1_1 {
+public static void main(String args[]) {
+	double x=-0.8, y=1.25, f;
+	f=count(x, y);
+	System.out.println(f);
+	}
+private static double count(double x, double y){
+double f = pow(y,x)+abs(x)+abs(y);
+return f;
+	}
+}
+Завдання 2:
+package prakt_1;
+import static java.lang.Math.*;
+public class prakt_1_2 {
+	public static void main(String args[]) {
+		double x=-11, b=12.5, a,c,y;
+		a=countA(x, b);
+		c=countC(a,b);
+		y=countY(c);
+		System.out.println(y);
+		}
+	private static double countA(double x, double b){
+	double a = sqrt(abs(x))+pow(Math.E, sqrt(b));
+	return a;
+		}
+	private static double countC(double a, double b){
+		double c = pow(a,2)+pow(b,2);
+		return c;
+	}
+	private static double countY(double c){
+		double y = pow(c,3)/cos(c);
+		return y;
+	}
+}
