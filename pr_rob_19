@@ -1,0 +1,84 @@
+package pr_19;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+public class pr_19 {
+   public static void main(String[] args) {
+       JFrame frame = new JFrame("Два списки");
+       frame.setSize(new Dimension(600,350));
+       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       frame.setLocationRelativeTo(null);
+       frame.setLayout(new FlowLayout());
+       JPanel panelTop = new JPanel();
+       JPanel panelCenter = new JPanel(new FlowLayout());
+       JTextField textField = new JTextField(15);
+       JButton addBtn = new JButton("Додати");
+       JButton removeBtn = new JButton("Видалити");
+       JButton moveRightBtn = new JButton("Перемістити →");
+       JButton moveLeftBtn = new JButton("← Перемістити");
+       DefaultListModel<String> leftModel = new DefaultListModel<>();
+       DefaultListModel<String> rightModel = new DefaultListModel<>();
+       String[] names = {
+           "Хомін","Пастернак","Гобелен","Малько","Пінчук",
+           "Лицик","Боньшак","Дивак","Сирник","Ушков"
+       };
+       for(String n : names) leftModel.addElement(n);
+       JList<String> leftList = new JList<>(leftModel);
+       JList<String> rightList = new JList<>(rightModel);
+       JScrollPane leftSP = new JScrollPane(leftList);
+       JScrollPane rightSP = new JScrollPane(rightList);
+       leftSP.setPreferredSize(new Dimension(150,200));
+       rightSP.setPreferredSize(new Dimension(150,200));
+       addBtn.addActionListener(new ActionListener(){
+           public void actionPerformed(ActionEvent e){
+               leftModel.addElement(textField.getText());
+               textField.setText("");
+           }
+       });
+       removeBtn.addActionListener(new ActionListener(){
+           public void actionPerformed(ActionEvent e){
+               if(!leftList.isSelectionEmpty())
+                   leftModel.removeElement(leftList.getSelectedValue());
+               if(!rightList.isSelectionEmpty())
+                   rightModel.removeElement(rightList.getSelectedValue());
+           }
+       });
+       moveRightBtn.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+               String selected = leftList.getSelectedValue();
+               if(selected != null){
+                   leftModel.removeElement(selected);
+                   rightModel.addElement(selected);
+               }
+           }
+       });
+       moveLeftBtn.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+               String selected = rightList.getSelectedValue();
+               if(selected != null){
+                   rightModel.removeElement(selected);
+                   leftModel.addElement(selected);
+               }
+           }
+       });
+       panelTop.add(textField);
+       panelTop.add(addBtn);
+       panelTop.add(removeBtn);
+       panelCenter.add(leftSP);
+       panelCenter.add(moveRightBtn);
+       panelCenter.add(moveLeftBtn);
+       panelCenter.add(rightSP);
+       frame.add(panelTop, BorderLayout.NORTH);
+       frame.add(panelCenter, BorderLayout.CENTER);
+       frame.setVisible(true);
+   }
+}
