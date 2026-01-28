@@ -1,0 +1,11 @@
+package prakt_3;
+public class prakt_3_1 {
+	public static void main (String[] args) {
+		int dob=1;
+		for(int i=5; i<60; i++) {
+			if(i%3==0)
+				dob=dob*i;
+			}
+		System.out.println("Dobutok="+dob);		
+		}
+	}
