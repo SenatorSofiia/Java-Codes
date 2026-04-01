@@ -1,0 +1,32 @@
+package prakt_10;
+public class prakt_10_1 {
+  
+   public interface Book {
+       public void buy();
+       public void read();
+   }
+   public static class harrypotter implements Book {
+       public void buy() {
+           System.out.println("Ми купили книгу 'Гаррі Поттер'!");
+       }
+       public void read() {
+           System.out.println("Ми прочитали книгу 'Гаррі Поттер'!");
+       }
+   }
+   public static class kobzar implements Book {
+       public void buy() {
+           System.out.println("Ми купили книгу 'Кобзар'!");
+       }
+       public void read() {
+           System.out.println("Ми прочитали книгу 'Кобзар'!");
+       }
+   }
+   public static void main(String[] args) {
+       Book harrypotter = new harrypotter();
+       harrypotter.buy();
+       harrypotter.read();
+       Book kobzar = new kobzar();
+       kobzar.buy();
+       kobzar.read();
+   }
+}

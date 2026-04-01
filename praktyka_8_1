@@ -1,0 +1,28 @@
+package prakt_8;
+import java.awt.*;
+import javax.swing.*;
+	public class prakt_8_1 extends JFrame {
+		public prakt_8_1() {
+			setTitle("Graphics Example");
+			setSize(550, 550);
+			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			setVisible(true);
+		}
+		public void paint(Graphics g) {
+			super.paint(g);
+			g. drawLine(20, 20, 40, 100); 
+			g. drawLine(40,20, 20,100);
+			g. drawOval(40,10, 50,90);
+			g. drawLine(110, 100, 110, 20); 
+			g. drawLine(140, 60, 110, 20); 
+			g. drawLine(140, 60, 170, 20); 
+			g. drawLine(170, 20, 170, 100); 
+			g. drawLine(180, 20, 180, 100); 
+			g. drawLine(190, 20, 190, 100); 
+			g. drawLine(240, 20, 240, 100); 
+			g. drawLine(240, 60, 190, 60); 
+			
+		}
+		public static void main(String[] args) {
+			new prakt_8_1();
+		}}

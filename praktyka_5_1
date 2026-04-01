@@ -1,0 +1,15 @@
+package prakt_5;
+import java.util.Arrays;
+public class prakt_5_1 {
+	public static void main(String args[]) {
+		double f=0;
+		int mas[] = {58, 23, -45, 12, 67, -62, 72, 8, 17, -45, -99, 83};
+       System.out.println(Arrays.toString(mas));
+       for (int i = 0; i < mas.length; i++) {
+       	if (mas[i]>0) {
+           f=f+mas[i];
+       	}
+       }
+       System.out.println("Suma dodatnich="+f);
+	}
+}

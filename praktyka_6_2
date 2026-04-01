@@ -1,0 +1,21 @@
+package prakt_6;
+public class prakt_6_2 {
+	public static void main(String args[]) {
+		double[][] mas = {
+				{2, 7, -13, 3, 4, 1, -2},
+				{9, 1, 20, 1, -5, 4, 8},
+				{8, 3, -5, 6, 17, 9, 83}
+		};
+		for (int j = 0; j < mas[0].length; j++) {
+			double max = mas[0][j];
+			int index = 0;
+			for (int i = 1; i < mas.length; i++) {
+				if (mas[i][j] > max) {
+					max = mas[i][j];
+					index = i;
+				}
+			}
+			System.out.println("Стовпець " + j + ": макс = " + max + ", індекс рядка = " + index);
+		}
+	}
+}

@@ -1,0 +1,21 @@
+package prakt_11;
+	public class prakt_11_2 {
+	    public static void main(String[] args) {
+	        double[][] mas = {
+	            {2, -53, 4, 0},
+	            {-1, 5, 86, -7},
+	            {8, -9, 13, 3},
+	            {0, 12, -4, 95}};
+	        int n = mas.length;         
+	        int m = mas[0].length;      
+	        for (int j = 0; j < m; j++) {
+	            int k = 0;              
+	            double sum = 0;         
+	            for (int i = 0; i < n; i++) {
+	                if (mas[i][j] > 0) {
+	                    k++;
+	                    sum += mas[i][j];
+	                }
+	            }
+	            System.out.println("Стовпець " + (j + 1) + ": кількість додатних = " + k + ", сума = " + sum);
+	        }}}

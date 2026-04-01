@@ -1,0 +1,10 @@
+package prakt_4;
+public class prakt_4_1 {
+	public static void main(String[] args) {
+	double 	y, a=9.2, b=7.65;
+	for(double x=3.5; x<=4.0; x+=0.08) {
+		y=(a*x-Math.cbrt(b))/Math.pow((Math.tan(x)),3);
+		System.out.println("y="+y);
+		}
+	}
+}

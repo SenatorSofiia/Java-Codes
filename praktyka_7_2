@@ -1,0 +1,21 @@
+package prakt_7;
+import static java.lang.Math.*;
+public class prakt_7_2 {
+  
+   static double calcY(double u, double v) {
+       return pow(log(u - pow(v, 2)), 2);
+   }
+   public static void main(String[] args) {
+       double a = 7.13, b = 3.0, x = 0.7;
+       double y = calcY(a, x);
+       double numerator = pow(log(a - pow(x, 2)), 2);
+       double denominator = pow(b, 2) - pow(log(a - x), 2) - pow(log(a - pow(x, 2)), 4);
+       double z = numerator / denominator;
+      
+       System.out.println("a = " + a);
+       System.out.println("b = " + b);
+       System.out.println("x = " + x);
+       System.out.println("y = " + y);
+       System.out.println("z = " + z);
+   }
+}

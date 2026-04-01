@@ -1,0 +1,28 @@
+package prakt_2_2;
+import java.util.Scanner;
+class prakr_2_2_1 {
+	double x,y,z;
+	public void Scan() {
+		Scanner scn=new Scanner(System.in);
+		System.out.println("Type x:");
+		x=scn.nextDouble();
+		System.out.println("Type y:");
+		y=scn.nextDouble();
+		System.out.println("Type z:");
+		z=scn.nextDouble();
+	}
+}
+
+package prakt_2_2;
+public class prakt_2_2 {
+   public static void main(String args[]) {
+       double f;
+       prakr_2_2_1 myR = new prakr_2_2_1();
+       myR.Scan();
+       if (myR.x >= myR.y)
+           f = 1 + myR.x + (myR.x / (myR.y * myR.y));
+       else
+           f = Math.sqrt(Math.pow(Math.E, Math.sin(myR.x)) + Math.pow(Math.log(myR.z), 2));
+       System.out.println("f = " + f);
+   }
+}

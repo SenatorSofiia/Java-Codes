@@ -1,0 +1,20 @@
+package prakt_6;
+public class prakt_6_1 {
+	public static void main(String args[]) {
+		double [] [] mas = {
+				{2, 7, -13, 3, 4, 1, -2},
+				{9, 1, 20, 1,-5, 4, 8 },
+				
+		};
+		double g=1;
+		for(int i=0; i<2; i++) {
+			for (int j=0; j<7; j++) {
+				if (mas[i][j]>4) {
+					g=g*mas[i][j];
+				}
+			}
+		}
+		System.out.println("Dobutok="+g);
+			
+		}
+	}
